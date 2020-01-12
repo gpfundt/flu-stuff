@@ -33,12 +33,6 @@ body {
   top:180px;;
 
 }
-#plot,
-.charts {
-  position:absolute; 
-  left:100px; 
-  top:620px;;
-}
 
 .dropdown-menu {
   width: 400px;

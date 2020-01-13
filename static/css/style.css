@@ -17,20 +17,20 @@ body {
 
 #map,
 .charts {
-  height: 400px;
-  width: 520px;
+  height: 350px;
+  width: 580px;
   position:absolute; 
-  left:100px; 
-  top:180px;;
+  left:40px; 
+  top:240px;;
 }
 
 #map2,
 .charts {
-  height: 400px;
-  width: 520px;
+  height: 350px;
+  width: 580px;
   position:absolute; 
   left:640px; 
-  top:180px;;
+  top:240px;;
 
 }
 
@@ -61,15 +61,36 @@ body {
 
 .dropdown-menu {
   width: 400px;
+  position:absolute; 
+  left:40px; 
+  top:140px;;
+}
+.dropheader1 {
+  color: navy;
 }
 
 .dropdown-menu2 {
   width: 400px;
   position:absolute; 
   left:600px; 
-  top:60px;;
+  top:140px;;
+}
+.dropheader2 {
+  color: navy;
 }
 
+.custom-select {
+  position: relative;
+  font-family: Arial;
+}
+.select-items {
+  position: absolute;
+  background-color: navy;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
 .leaflet-popup-content {
   text-align: center;
 }

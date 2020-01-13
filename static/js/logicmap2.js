@@ -1,6 +1,6 @@
 // Creating map object
 
-var myMap2 = L.map('map2').setView([37.8, -96], 4);
+var myMap2 = L.map('map2').setView([37.8, -96], 3);
 
 // Adding tile layer
 L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {

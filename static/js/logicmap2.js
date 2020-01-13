@@ -63,7 +63,7 @@ function buildMap2(newdata2){
         fillOpacity: 0.8
       },
       onEachFeature: function(feature, layer) {
-        layer.bindPopup("<br>flu imz coverage :<br>" + feature.properties.activity);
+        layer.bindPopup("<br>Flu Immunization Coverage :<br>" + feature.properties.activity);
       }  
     }).addTo(myMap2);
   });

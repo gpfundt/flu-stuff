@@ -36,15 +36,15 @@
           <a class="nav-link" href="https://gpfundt.github.io/flu-stuff/index.html">Home</a>
           <a class="nav-link" href="https://gpfundt.github.io/flu-stuff/maps.html">Maps</a>
           <a class="nav-link" href="https://gpfundt.github.io/flu-stuff/line.html">Line</a>
-          <a class="nav-link" href="https://gpfundt.github.io/flu-stuff/pie.html">Pies</a>
+          <a class="nav-link" href="https://gpfundt.github.io/flu-stuff/bar.html">Bar</a>
         </li>
       </div>
     </nav>
     <!-- End of navbar -->
-    <div>
+    <div class="custom-select">
       <ul class="dropdown-menu">
         <h3 class='dropheader1'>Seasons of Flu Levels</h3>
-        <select class="custom-select" id="selDataset" onchange="getData(this.value)">
+        <select  id="selDataset" onchange="getData(this.value)">
           <option value="0809">2008-09</option>
           <option value="0910">2009-10</option>
           <option value="1011">2010-11</option>
@@ -61,7 +61,7 @@
       </ul>
       <ul class="dropdown-menu2">
         <h3 class='dropheader2'>Seasons of Immunization Coverage</h3>
-        <select class="custom-select" id="selDataset2" onchange="getData2(this.value)">
+        <select id="selDataset2" onchange="getData2(this.value)">
           <option value="0910">2009-10</option>
           <option value="1011">2010-11</option>
           <option value="1112">2011-12</option>

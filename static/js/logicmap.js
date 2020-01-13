@@ -69,27 +69,25 @@ function buildMap(newdata){
         fillOpacity: 0.8
       },
       onEachFeature: function(feature, layer) {
-        layer.bindPopup("<br>flu activity level from 0-10 :<br>" + feature.properties.activity);
-      }  
+        layer.bindPopup("<br>Flu Level (0-10) :<br>" + feature.properties.activity + 
+          '<br> Urban % : <br>' + feature.properties.urban +
+          '<br>'+ "<div id='pieplot'></div");
+          function BuildPlot(){
+            var trace1 = {
+              labels: ["Urban", "Rural"],
+              values: [feature.properties.urban, 100-feature.properties.urban],
+              type: 'pie'
+            };
+            var layout = {
+              title: "Pie of State Urban Density",
+            };
+            Plotly.newPlot("pieplot", [trace1], layout);
+          layer.on({
+              click: BuildPlot
+          });
+        };
+      }
     }).addTo(myMap);
-  });
-};
-
-
-function buildPie(state){
-  d3.csv('static/data/states_urban_percent.csv', function(data) {
-    var i;
-    for (i = 0; i < data.length; i++) {
-      var trace1 = {
-        labels: ["Urban", "Rural"],
-        values: [data[i].urban, 100-data[i].urban],
-        type: 'pie'
-      };
-      var layout = {
-        title: "Pie of Flu Activity",
-      };
   
-      Plotly.newPlot("pieplot", [trace1], layout);
-    };
   });
 };

@@ -5,7 +5,7 @@ d3.csv('static/data/flu_weeks_seasons.csv', function(data) {
   var xaxis = Array.from(Array(data_range).keys())
 
   var trace1 = {
-    x: xaxis,
+    x: data.map(row => row.x),
     y: data.map(row => parseInt(row.actlevel)),
     text: data.map(row => row.x),
     type: 'scatter'
@@ -15,10 +15,6 @@ d3.csv('static/data/flu_weeks_seasons.csv', function(data) {
   var layout = {
     title: "Scatter of Flu Activity",
   };
-  
-  // console.log(data.map(row => row.X))
-  // console.log([trace1]);
-  // console.log(layout);
 
   // Render the plot to the div tag with id "plot"
   Plotly.newPlot("plot", [trace1], layout);

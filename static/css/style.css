@@ -36,19 +36,20 @@ body {
 .charts {
   height: 350px;
   width: 580px;
-  position:absolute; 
-  left:40px; 
-  top:240px;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  top: 100px;
 }
 
 #map2,
 .charts {
   height: 350px;
   width: 580px;
-  position:absolute; 
-  left:640px; 
-  top:240px;
-
+  position: relative;
+  display: inline-block;
+  overflow: hidden; 
+  top: 100px;
 }
 .bar {
   fill: white;
@@ -87,7 +88,7 @@ body {
   width: 400px;
   position:absolute; 
   left:40px; 
-  top:140px;;
+  top:180px;;
 }
 .dropheader1 {
   color: navy;
@@ -97,7 +98,7 @@ body {
   width: 400px;
   position:absolute; 
   left:600px; 
-  top:140px;;
+  top:180px;;
 }
 .dropheader2 {
   color: navy;

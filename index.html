@@ -3,8 +3,7 @@
   <head>
     <meta charset="UTF-8">
 
-    <title>Flu Project Home</title>
-
+    <title>Flu Choropleth</title>
     <h1 class="ml6">
       <span class="text-wrapper">
         <span class="letters">The Flu Is A Big Deal</span>
@@ -34,7 +33,7 @@
           delay: 1000
         });
     </script>
-    
+
     <!-- Leaflet CSS & JS-->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
     integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
@@ -54,25 +53,89 @@
 
     <!-- Our CSS -->
     <link rel="stylesheet" type="text/css" href="static/css/style.css">
+    <!-- New JavaScript Library-->
+    <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+    <script>
+      var soundID = "Sneeze";
 
+      function loadSound () {
+        createjs.Sound.registerSound("assets/Sneezing.mp3", soundID);
+      }
+
+      function playSound () {
+        createjs.Sound.play(soundID);
+      }
+    </script>
   </head>
-  <body>
+  <body onload="loadSound();">
 
     <!-- Start of navbar -->
     <nav class="navbar">
-          <div>
-            <li class="nav-item">
-              <a class="nav-link" href="https://gpfundt.github.io/flu-stuff/index.html">Home</a>
-              <a class="nav-link" href="https://gpfundt.github.io/flu-stuff/maps.html">Maps</a>
-              <a class="nav-link" href="https://gpfundt.github.io/flu-stuff/line.html">Line</a>
-              <a class="nav-link" href="https://gpfundt.github.io/flu-stuff/bar.html">Bar</a>
-            </li>
-        </div>
+      <div>
+        <li class="nav-item">
+          <a class="nav-link" href="https://gpfundt.github.io/flu-stuff/index.html">Home</a>
+          <a class="nav-link" href="https://gpfundt.github.io/flu-stuff/maps.html">Maps</a>
+          <a class="nav-link" href="https://gpfundt.github.io/flu-stuff/line.html">Line</a>
+          <a class="nav-link" href="https://gpfundt.github.io/flu-stuff/bar.html">Bar</a>
+        </li>
+      </div>
     </nav>
     <!-- End of navbar -->
-    <div>
-    <img class='img' src="https://www.xofluza.com/content/dam/gene/xofluza/patient/images/Mobile/Xofluza-Flu-Infographic-Visualization1.gif">
+    <div class="custom-select">
+      <ul class="dropdown-menu">
+        <h3 class='dropheader1'>Seasons of Flu Levels</h3>
+        <select  id="selDataset" onchange="getData(this.value); playSound();" class="playSound">
+          <option value="0809">2008-09</option>
+          <option value="0910">2009-10</option>
+          <option value="1011">2010-11</option>
+          <option value="1112">2011-12</option>
+          <option value="1213">2012-13</option>
+          <option value="1314">2013-14</option>
+          <option value="1415">2014-15</option>
+          <option value="1516">2015-16</option>
+          <option value="1617">2016-17</option>
+          <option value="1718">2017-18</option>
+          <option value="1819">2018-19</option>
+          <option value="1920">2019-20</option>            
+        </select>
+      </ul>
+      <ul class="dropdown-menu2">
+        <h3 class='dropheader2'>Seasons of Immunization Coverage</h3>
+        <select id="selDataset2" onchange="getData2(this.value)">
+          <option value="0910">2009-10</option>
+          <option value="1011">2010-11</option>
+          <option value="1112">2011-12</option>
+          <option value="1213">2012-13</option>
+          <option value="1314">2013-14</option>
+          <option value="1415">2014-15</option>
+          <option value="1516">2015-16</option>
+          <option value="1617">2016-17</option>
+          <option value="1718">2017-18</option>
+          <option value="1819">2018-19</option>           
+        </select>
+      </ul>
     </div>
+    
+    <!-- Map and char divs -->
+    <div class= "chart">
+      <div id="map"></div>
+      <div id="map2"></div>
+    </div>
+
+
+    <script type="text/javascript" src="static/js/config.js"></script>
+    <script type="text/javascript" src="static/js/logicmap.js"></script>
+    <script type="text/javascript" src="static/js/logicmap2.js"></script>
+
+    
+    <!-- Start of footer -->
+    <!-- <footer class="footer navbar-fixed-bottom">
+      <div class="two-toned-footer-color"></div>
+      <p class="text-muted text-muted-footer text-center">
+        &copy; Copyright Greta and Party Pat 2020
+      </p>
+    </footer> -->
+    <!-- End of footer -->
 
   </body>
 </html>

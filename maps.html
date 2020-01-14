@@ -81,46 +81,50 @@
       </div>
     </nav>
     <!-- End of navbar -->
-    <div class="custom-select">
-      <ul class="dropdown-menu">
-        <h3 class='dropheader1'>Seasons of Flu Levels</h3>
-        <select  id="selDataset" onchange="getData(this.value); playSound();" class="playSound">
-          <option value="0809">2008-09</option>
-          <option value="0910">2009-10</option>
-          <option value="1011">2010-11</option>
-          <option value="1112">2011-12</option>
-          <option value="1213">2012-13</option>
-          <option value="1314">2013-14</option>
-          <option value="1415">2014-15</option>
-          <option value="1516">2015-16</option>
-          <option value="1617">2016-17</option>
-          <option value="1718">2017-18</option>
-          <option value="1819">2018-19</option>
-          <option value="1920">2019-20</option>            
-        </select>
-      </ul>
-      <ul class="dropdown-menu2">
-        <h3 class='dropheader2'>Seasons of Immunization Coverage</h3>
-        <select id="selDataset2" onchange="getData2(this.value)">
-          <option value="0910">2009-10</option>
-          <option value="1011">2010-11</option>
-          <option value="1112">2011-12</option>
-          <option value="1213">2012-13</option>
-          <option value="1314">2013-14</option>
-          <option value="1415">2014-15</option>
-          <option value="1516">2015-16</option>
-          <option value="1617">2016-17</option>
-          <option value="1718">2017-18</option>
-          <option value="1819">2018-19</option>           
-        </select>
-      </ul>
+    <div class= "chart">
+      <div class="custom-select">
+        <ul class="dropdown-menu">
+          <h3 class='dropheader1'>Seasons of Flu Levels</h3>
+          <select  id="selDataset" onchange="getData(this.value); playSound();" class="playSound">
+            <option value="0809">2008-09</option>
+            <option value="0910">2009-10</option>
+            <option value="1011">2010-11</option>
+            <option value="1112">2011-12</option>
+            <option value="1213">2012-13</option>
+            <option value="1314">2013-14</option>
+            <option value="1415">2014-15</option>
+            <option value="1516">2015-16</option>
+            <option value="1617">2016-17</option>
+            <option value="1718">2017-18</option>
+            <option value="1819">2018-19</option>
+            <option value="1920">2019-20</option>            
+          </select>
+        </ul>
+        <div id="map"></div>
+        <ul class="dropdown-menu2">
+          <h3 class='dropheader2'>Seasons of Immunization Coverage</h3>
+          <select id="selDataset2" onchange="getData2(this.value)">
+            <option value="0910">2009-10</option>
+            <option value="1011">2010-11</option>
+            <option value="1112">2011-12</option>
+            <option value="1213">2012-13</option>
+            <option value="1314">2013-14</option>
+            <option value="1415">2014-15</option>
+            <option value="1516">2015-16</option>
+            <option value="1617">2016-17</option>
+            <option value="1718">2017-18</option>
+            <option value="1819">2018-19</option>           
+          </select>
+        </ul>
+        <div id="map2"></div>
+      </div>
     </div>
     
     <!-- Map and char divs -->
-    <div class= "chart">
-      <div id="map"></div>
-      <div id="map2"></div>
-    </div>
+    
+      
+      
+    
 
 
     <script type="text/javascript" src="static/js/config.js"></script>

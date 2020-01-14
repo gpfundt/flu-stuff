@@ -2,9 +2,8 @@
 html {
   /* Positioning */
   position: relative;
-
-  /* Box-model */
-  min-height: 100%;
+  height: 100%;
+  width:100%;
 }
 
 body {
@@ -13,6 +12,7 @@ body {
   background-color: #ededed;
   height: 100%;
   width:  100%;
+  position: relative;
 }
 
 .ml6 {
@@ -34,22 +34,22 @@ body {
 
 #map,
 .charts {
-  height: 350px;
-  width: 580px;
-  position: relative;
-  display: inline-block;
-  overflow: hidden;
-  top: 100px;
+  height: 45%;
+  width: 45%;
+  position: fixed;
+  overflow: hidden; 
+  top: 42%;
+  left:2%;
 }
 
 #map2,
 .charts {
-  height: 350px;
-  width: 580px;
-  position: relative;
-  display: inline-block;
+  height: 45%;
+  width: 45%;
+  position: fixed;
   overflow: hidden; 
-  top: 100px;
+  top: 42%;
+  right:2%;
 }
 .bar {
   fill: white;
@@ -78,27 +78,29 @@ body {
 }
 
 .img {
-  position:relative; 
-  left:280px; 
-  top:40px;
-  
+  position: fixed; 
+  left:25%; 
+  right:25%;
+  top: 30%;
+  display: inline-block;
+  overflow: hidden;
 }
 
 .dropdown-menu {
-  width: 400px;
-  position:absolute; 
-  left:40px; 
-  top:180px;;
+  position: fixed;
+  overflow: hidden; 
+  top: 25%;
+  left:0%;
 }
 .dropheader1 {
   color: navy;
 }
 
 .dropdown-menu2 {
-  width: 400px;
-  position:absolute; 
-  left:600px; 
-  top:180px;;
+  position: fixed;
+  overflow: hidden; 
+  top: 25%;
+  right:16%;
 }
 .dropheader2 {
   color: navy;
@@ -113,6 +115,7 @@ h1 {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   padding: 14px 16px;
   color: navy;
+  position: relative
 }
 
 

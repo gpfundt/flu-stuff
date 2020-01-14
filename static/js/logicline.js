@@ -11,7 +11,6 @@ d3.csv('static/data/flu_weeks_seasons.csv', function(data) {
     type: 'scatter'
   };
 
-  console.log(data.map(row => row.actlevel));
 
   // Apply the group barmode to the layout
   var layout = {

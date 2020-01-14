@@ -25,9 +25,21 @@
 
     <!-- Our CSS -->
     <link rel="stylesheet" type="text/css" href="static/css/style.css">
+    <!-- New JavaScript Library-->
+    <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+    <script>
+      var soundID = "Sneeze";
 
+      function loadSound () {
+        createjs.Sound.registerSound("assets/Sneezing.mp3", soundID);
+      }
+
+      function playSound () {
+        createjs.Sound.play(soundID);
+      }
+    </script>
   </head>
-  <body>
+  <body onload="loadSound();">
 
     <!-- Start of navbar -->
     <nav class="navbar">
@@ -44,7 +56,7 @@
     <div class="custom-select">
       <ul class="dropdown-menu">
         <h3 class='dropheader1'>Seasons of Flu Levels</h3>
-        <select  id="selDataset" onchange="getData(this.value)">
+        <select  id="selDataset" onchange="getData(this.value); playSound();" class="playSound">
           <option value="0809">2008-09</option>
           <option value="0910">2009-10</option>
           <option value="1011">2010-11</option>

@@ -53,7 +53,7 @@ function buildMap2(newdata2){
   d3.json(newdata2, function(geodata2){
     console.log(newdata2);
     L.choropleth(geodata2, { 
-      valueProperty :'activity',
+      valueProperty :'imzactivity',
       scale: ["green","yellow", "red"],
       steps: 11,
       mode: 'q',
@@ -63,7 +63,7 @@ function buildMap2(newdata2){
         fillOpacity: 0.8
       },
       onEachFeature: function(feature, layer) {
-        layer.bindPopup("<br>Flu Immunization Coverage :<br>" + feature.properties.activity);
+        layer.bindPopup("<br>Flu Immunization Coverage :<br>" + feature.properties.imzactivity);
       }  
     }).addTo(myMap2);
   });

@@ -59,7 +59,7 @@ function buildMap(newdata){
   d3.json(newdata, function(geodata){
     console.log(newdata);
     L.choropleth(geodata, { 
-      valueProperty :'activity',
+      valueProperty :'fluactivity',
       scale: ["green","yellow", "red"],
       steps: 11,
       mode: 'q',
@@ -69,7 +69,7 @@ function buildMap(newdata){
         fillOpacity: 0.8
       },
       onEachFeature: function(feature, layer) {
-        layer.bindPopup("<br>Flu Level (0-10) :<br>" + feature.properties.activity + 
+        layer.bindPopup("<br>Flu Level (0-10) :<br>" + feature.properties.fluactivity + 
           '<br> Urban % : <br>' + feature.properties.urban +
           '<br>'+ "<div id='pieplot'></div");
           function BuildPlot(){

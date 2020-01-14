@@ -1,18 +1,20 @@
-/#app.py
+#app.py
 #Import necessary packages
 from flask import Flask
 from flask_restful import Resource, reqparse, Api 
 #Instantiate a flask object 
 app = Flask(__name__)
 #Instantiate Api object
-api = Api(app)
+fluapi = Api(app)
+
 #Setting the location for the sqlite database
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///base.db'
 #Adding the configurations for the database
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['PROPAGATE_EXCEPTIONS'] = True 
+
 #Import necessary classes from base.py
-from base import Movies, db
+from base import flu_data, db
 #Link the app object to the Movies database 
 db.init_app(app)
 app.app_context().push()

@@ -6,10 +6,12 @@ d3.csv('static/data/flu_weeks_seasons.csv', function(data) {
 
   var trace1 = {
     x: data.map(row => row.x),
-    y: data.map(row => parseInt(row.actlevel)),
+    y: data.map(row => row.actlevel),
     text: data.map(row => row.x),
     type: 'scatter'
   };
+
+  console.log(data.map(row => row.actlevel));
 
   // Apply the group barmode to the layout
   var layout = {

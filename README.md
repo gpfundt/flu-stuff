@@ -1,6 +1,6 @@
 # Flu Info Project 
 
-I always hear mixed opinions that the flu vaccinations aren't accurate enough each year to really work so I wanted to use this project to track the level of severity of the flu in each state vs the immunization coveraage in each state over the last few years. 
+I always hear mixed opinions that the flu vaccinations aren't accurate enough each year to really work so I wanted to use this project to track the level of severity of the flu in each state (except North Dakota bc it doesnt exist) vs the immunization coveraage in each state over the last few years. 
 
 I was impressed to find that state by state the level of flu was conversly related to the level of immunization coverage (normalized by population). You can see this by flipping through the years on my maps page of this website.
 
